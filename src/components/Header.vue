@@ -1,15 +1,16 @@
 <template lang="html">
-  <div>
-     	<mt-header title="标题过长会隐藏后面的内容啊哈哈哈哈">  
-          <router-link to="/" slot="left">  
-            <mt-button icon="back" @click="handleClose">返回</mt-button>  
-          </router-link>  
-          <mt-button icon="more" slot="right" @click="more"></mt-button>  
-        </mt-header>  
+  <div class="Header">
+      <div class="navbar">长沙<i class="iconfont icon-xiangxia"></i></div>
+      <div class="searchBox">
+        <i class ="iconfont icon-sousuo"></i>
+        <input class="searchInput" type="text"  readonly="readonly" placeholder="请输入景区/地名" name="search" value=""/>
+      </div>
+      <div class="navbar" >登录</div>
   </div>
 </template>
 
 <script>
+  
 export default {
   name:'heades',
     methods: { 
@@ -24,12 +25,14 @@ export default {
 </script>
 
 <style lang="scss" scoped="" type="text/css">
-  .demo-grid{
-    height: 0.533rem;
-    line-height: 0.533rem;
-    font-size:0.213rem;
+  .Header{
+    height: 0.4rem;
+    line-height: 0.4rem;
     color: #fff;
+    background: #328CCC;
     .searchBox{
+      width:60%;
+      float: left;
       position: relative;
       i{
         font-size: 0.213rem;
@@ -38,11 +41,12 @@ export default {
         left: 0.106rem;
       }
       input{
-        height: 0.4rem;
-        line-height: 0.4rem;
+        height: 0.25rem;
+        line-height: 0.25rem;
         width: 100%;
         border: none;
         outline: none;
+        box-sizing: border-box;
         background: $backgroundSmall;
         padding-left: 0.4rem;
       }
@@ -51,6 +55,10 @@ export default {
          }
     }
     .navbar{
+      width:20%;
+      float: left;
+      height: 100%;
+      text-align: center;
       .icon-xiangxia{
         font-size:0.15rem;
         margin-left:0.066rem;
