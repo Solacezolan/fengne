@@ -67,21 +67,29 @@
     			 查看专属推荐
     		</div>
   		</div>
-   	</div>
+   	</div> 
+   	<codes :content='{
+    			title:"asdasdasd"
+    		}'></codes>
   </div>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
 import Swife from '../components/Swife.vue'
+import codes from '../components/codes.vue'
 export default {
   name: 'index',
   components: {
   	Header,
-  	Swife
+  	Swife,
+  	codes
   },
   data () {
     return {
+		items:{
+			title:"asdasdasd"
+		}
     }
   },
    methods: {
