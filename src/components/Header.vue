@@ -5,7 +5,7 @@
         <i class ="iconfont icon-sousuo"></i>
         <input class="searchInput" type="text"  readonly="readonly" placeholder="请输入景区/地名" name="search" value=""/>
       </div>
-      <div class="navbar" >登录</div>
+      <div class="navbar" @click="toLogin">登录</div>
   </div>
 </template>
 
@@ -14,6 +14,9 @@
 export default {
   name:'heades',
     methods: { 
+    toLogin:function(){
+      this.$router.push('/login');
+    },
   	handleClose: function(){  
         console.log("返回")  
     },  

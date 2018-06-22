@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <router-view/>
+    <transition :name="LoadDirection">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data:{
+    return(){
+      LoadDirection:"right"
+    }
+  }
 }
 </script>
 

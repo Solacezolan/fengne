@@ -68,9 +68,6 @@
     		</div>
   		</div>
    	</div> 
-   	<codes :content='{
-    			title:"asdasdasd"
-    		}'></codes>
   </div>
 </template>
 
@@ -86,6 +83,7 @@ export default {
   	codes
   },
   data () {
+  	
     return {
 		items:{
 			title:"asdasdasd"
